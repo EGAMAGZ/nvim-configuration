@@ -40,9 +40,12 @@ Plug('hrsh7th/nvim-cmp')
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
 
-vim.call('plug#end')
--- Catppuccin Theme
+-- Colorizer
+Plug('norcalli/nvim-colorizer.lua')
 
+vim.call('plug#end')
+
+-- Catppuccin Theme
 local function save_colorscheme(colorscheme)
 	local file = io.open(vim.fn.stdpath("data") .. "/colorscheme", "w")
 
@@ -82,7 +85,7 @@ function toggle_colorscheme()
 	save_colorscheme(current_colorscheme)
 end
 
-vim.keymap.set('n', '<leader>tc', toggle_colorscheme)
+vim.keymap.set('n', '<leader>ct', toggle_colorscheme)
 
 vim.g.current_colorscheme = load_colorscheme() or "catppuccin-mocha"
 vim.cmd('colorscheme ' .. vim.g.current_colorscheme)
@@ -243,6 +246,20 @@ nvim_lsp.ruff_lsp.setup({
 	capabilities= capabilities
 })
 
+nvim_lsp.tailwindcss.setup({
+	capabilities= capabilities
+})
+
+nvim_lsp.cssls.setup({
+	capabilities= capabilities
+})
+
+nvim_lsp.astro.setup({
+	capabilities= capabilities
+})
+
 -- GitSigns (Git integration)
 require('gitsigns').setup()
 
+-- Colorizer
+require('colorizer').setup()
