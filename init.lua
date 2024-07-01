@@ -43,6 +43,9 @@ Plug('saadparwaiz1/cmp_luasnip')
 -- Colorizer
 Plug('norcalli/nvim-colorizer.lua')
 
+-- Lorem ipsum
+Plug('derektata/lorem.nvim')
+
 vim.call('plug#end')
 
 -- Catppuccin Theme
@@ -85,7 +88,7 @@ function toggle_colorscheme()
 	save_colorscheme(current_colorscheme)
 end
 
-vim.keymap.set('n', '<leader>ct', toggle_colorscheme)
+vim.keymap.set('n', '<leader>tt', toggle_colorscheme)
 
 vim.g.current_colorscheme = load_colorscheme() or "catppuccin-mocha"
 vim.cmd('colorscheme ' .. vim.g.current_colorscheme)
@@ -263,3 +266,6 @@ require('gitsigns').setup()
 
 -- Colorizer
 require('colorizer').setup()
+
+
+require("lorem").setup()
