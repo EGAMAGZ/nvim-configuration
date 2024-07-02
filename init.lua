@@ -93,29 +93,7 @@ vim.keymap.set('n', '<leader>tt', toggle_colorscheme)
 vim.g.current_colorscheme = load_colorscheme() or "catppuccin-mocha"
 vim.cmd('colorscheme ' .. vim.g.current_colorscheme)
 
--- Telescope config
 
-require('telescope').setup{ 
-  defaults = { 
-vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
-      '--ignore-file',
-      '.gitignore'
-    },
-  }
-}
-
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- NvimTree (File Explorer) Config
 require("nvim-tree").setup()
