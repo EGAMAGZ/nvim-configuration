@@ -1,6 +1,4 @@
-vim.o.number = true
-vim.o.wrap = false
-vim.o.cursorline = true
+require("settings")
 
 -- Plugins
 local vim = vim
@@ -47,51 +45,6 @@ Plug('norcalli/nvim-colorizer.lua')
 Plug('derektata/lorem.nvim')
 
 vim.call('plug#end')
-
--- Catppuccin Theme
-local function save_colorscheme(colorscheme)
-	local file = io.open(vim.fn.stdpath("data") .. "/colorscheme", "w")
-
-	if file then
-		file:write(colorscheme)
-		file:close()
-	end
-end
-
-local function load_colorscheme()
-	local file = io.open(vim.fn.stdpath("data") .. "/colorscheme", "r")
-
-	if file then
-		local colorscheme = file:read("*all")
-		file:close()
-		return colorscheme
-	end
-
-	return nil
-end
-
-function toggle_colorscheme()
-	local current_colorscheme = vim.g.colors_name
-
-	local light_colorscheme = 'catppuccin-latte'
-	local dark_colorscheme = 'catppuccin-mocha'
-
-	if current_colorscheme == dark_colorscheme then
-		vim.g.current_colorscheme = light_colorscheme
-	else
-		vim.g.current_colorscheme = dark_colorscheme
-	end
-
-	current_colorscheme = vim.g.current_colorscheme
-
-	vim.cmd('colorscheme ' .. current_colorscheme)
-	save_colorscheme(current_colorscheme)
-end
-
-vim.keymap.set('n', '<leader>tt', toggle_colorscheme)
-
-vim.g.current_colorscheme = load_colorscheme() or "catppuccin-mocha"
-vim.cmd('colorscheme ' .. vim.g.current_colorscheme)
 
 
 
