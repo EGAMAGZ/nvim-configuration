@@ -1,29 +1,12 @@
 require("settings")
+require("plugins")
+
 
 -- Plugins
 local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-
--- Theme Catppuccin https://github.com/catppuccin/nvim
-Plug('catppuccin/nvim', { as = 'catppuccin' })
--- Tabline https://github.com/romgrk/barbar.nvim
-Plug('lewis6991/gitsigns.nvim') -- OPTIONAL: for git status
-Plug('romgrk/barbar.nvim')
-
--- File Explorer
-Plug('nvim-tree/nvim-web-devicons') -- optional (Usado por nvim-tree, tabline y lualine)
-Plug('nvim-tree/nvim-tree.lua')
-
--- Statusline https://github.com/nvim-lualine/lualine.nvim
-Plug('nvim-lualine/lualine.nvim')
-
--- Telescope (Fuzzy Finder)
-Plug('nvim-lua/plenary.nvim')
-Plug("BurntSushi/ripgrep")
-Plug("sharkdp/fd")
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.x' })
 
 -- Mason (LSP) https://github.com/williamboman/mason.nvim
 Plug('williamboman/mason.nvim')
@@ -38,22 +21,8 @@ Plug('hrsh7th/nvim-cmp')
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
 
--- Colorizer
-Plug('norcalli/nvim-colorizer.lua')
-
--- Lorem ipsum
-Plug('derektata/lorem.nvim')
 
 vim.call('plug#end')
-
-
-
--- NvimTree (File Explorer) Config
-require("nvim-tree").setup()
-vim.keymap.set('n', '<leader>b', ':NvimTreeToggle<CR>')
-
--- Lualine (Status line)
-require('lualine').setup()
 
 -- Mason (LSP)
 require("mason").setup()
@@ -142,19 +111,3 @@ nvim_lsp.astro.setup({
 nvim_lsp.emmet_language_server.setup({
 	capabilities= capabilities
 })
-
--- GitSigns (Git integration)
-require('gitsigns').setup {
-	on_attach = function(bufnr)
-		local gitsigns = require("gitsigns")
-		vim.keymap.set('n','<leader>tb', gitsigns.toggle_current_line_blame)
-	end
-}
-
-
-
--- Colorizer
-require('colorizer').setup()
-
-
-require("lorem").setup()

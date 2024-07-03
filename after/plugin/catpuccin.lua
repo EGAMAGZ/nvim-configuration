@@ -39,7 +39,15 @@ function toggle_colorscheme()
 	save_colorscheme(current_colorscheme)
 end
 
-vim.keymap.set('n', '<leader>tt', toggle_colorscheme)
+vim.keymap.set('n', '<leader>ct', toggle_colorscheme)
 
 vim.g.current_colorscheme = load_colorscheme() or default_colorscheme
 vim.cmd('colorscheme ' .. vim.g.current_colorscheme)
+
+require("catppuccin").setup {
+	integrations = {
+		cmp = true,
+		gitsigns = true,
+		barbar =true
+	}
+}
