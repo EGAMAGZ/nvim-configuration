@@ -30,7 +30,6 @@ telescope.setup {
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
--- TODO: THIS ONE DOESN'T WORK
 vim.keymap.set('n', '<leader>fs', function()
 	builtin.grep_string({ search = vim.fn.input("Grep >") })
 end)

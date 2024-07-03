@@ -58,4 +58,18 @@ return require('packer').startup(function(use)
 	use 'norcalli/nvim-colorizer.lua'
 	-- Lorem ipsum generator
 	use 'derektata/lorem.nvim'
+
+	-- LSP
+	use {
+		'vonheikemen/lsp-zero.nvim',
+		branch = 'v3.x',
+		requires = {
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
+			{'neovim/nvim-lspconfig'},
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'l3mon4d3/luasnip'},
+		}
+	}
 end)
