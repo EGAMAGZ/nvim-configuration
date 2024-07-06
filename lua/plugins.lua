@@ -56,6 +56,16 @@ return require('packer').startup(function(use)
 
 	-- Colorizer
 	use 'norcalli/nvim-colorizer.lua'
+
+	-- Autopairs
+	use {
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup {}
+		end
+	}
+
 	-- Lorem ipsum generator
 	use 'derektata/lorem.nvim'
 
