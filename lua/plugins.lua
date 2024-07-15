@@ -69,6 +69,23 @@ return require('packer').startup(function(use)
 	-- Lorem ipsum generator
 	use 'derektata/lorem.nvim'
 
+	-- Indent Lines
+	use {
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("ibl").setup()
+		end
+	}
+
+	-- Zen mode
+	use {
+		"Pocco81/true-zen.nvim",
+		config = function()
+			require("true-zen").setup {
+			}
+		end,
+	}
+
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
