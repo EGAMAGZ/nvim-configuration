@@ -50,6 +50,11 @@ require("catppuccin").setup {
 		gitsigns = true,
 		barbar =true,
 		notify=true,
-		mason=true
+		mason=true,
+		indent_blankline = {
+			enabled = true,
+			scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+			colored_indent_levels = true,
+		},
 	}
 }
