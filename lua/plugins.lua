@@ -9,8 +9,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
-	-- Dependencies
+	-- Icons 
 	use 'nvim-tree/nvim-web-devicons'
+
+	-- Git
 	use 'lewis6991/gitsigns.nvim'
 
 	-- Telescope
@@ -42,16 +44,13 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 
-	-- Nvim-tree
+	-- Nvim-tree (File explorer)
 	use {
 		'nvim-tree/nvim-tree.lua',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
-
-	-- Undotree
-	use 'mbbill/undotree'
 	
-	-- Vim fugitive
+	-- Vim fugitive (Git panel)
 	use 'tpope/vim-fugitive'
 
 	-- Colorizer
@@ -69,6 +68,9 @@ return require('packer').startup(function(use)
 	-- Lorem ipsum generator
 	use 'derektata/lorem.nvim'
 
+	-- Zen mode
+	use "folke/zen-mode.nvim"
+
 	-- Indent Lines
 	use {
 		"lukas-reineke/indent-blankline.nvim",
@@ -77,14 +79,8 @@ return require('packer').startup(function(use)
 		end
 	}
 
-	-- Zen mode
-	use {
-		"Pocco81/true-zen.nvim",
-		config = function()
-			require("true-zen").setup {
-			}
-		end,
-	}
+	-- Notify (Notifications)
+	use 'rcarriga/nvim-notify'
 
 	-- LSP
 	use {

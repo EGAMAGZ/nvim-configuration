@@ -48,6 +48,8 @@ require("catppuccin").setup {
 	integrations = {
 		cmp = true,
 		gitsigns = true,
-		barbar =true
+		barbar =true,
+		notify=true,
+		mason=true
 	}
 }
