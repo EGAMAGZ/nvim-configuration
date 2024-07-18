@@ -82,6 +82,9 @@ return require('packer').startup(function(use)
 	-- Notify (Notifications)
 	use 'rcarriga/nvim-notify'
 
+	-- Discord Presence
+	use 'IogaMaster/neocord'
+
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
