@@ -98,4 +98,7 @@ return require('packer').startup(function(use)
 			{'l3mon4d3/luasnip'},
 		}
 	}
+
+	-- Which Key
+	use "folke/which-key.nvim"
 end)

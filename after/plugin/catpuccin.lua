@@ -56,5 +56,6 @@ require("catppuccin").setup {
 			scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
 			colored_indent_levels = true,
 		},
+		which_key = false
 	}
 }
