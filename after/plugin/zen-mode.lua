@@ -8,4 +8,4 @@ zen_mode.setup{
 	}
 }
 
-vim.keymap.set("n", 'zn', zen_mode.toggle)
+vim.keymap.set("n", 'zn', zen_mode.toggle, { desc = "Toggle Zen mode of the current buffer" })

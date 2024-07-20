@@ -39,7 +39,7 @@ function toggle_colorscheme()
 	save_colorscheme(current_colorscheme)
 end
 
-vim.keymap.set('n', '<leader>ct', toggle_colorscheme)
+vim.keymap.set('n', '<leader>ct', toggle_colorscheme, { desc="Change between Catpuccin's color theme "})
 
 vim.g.current_colorscheme = load_colorscheme() or default_colorscheme
 vim.cmd('colorscheme ' .. vim.g.current_colorscheme)

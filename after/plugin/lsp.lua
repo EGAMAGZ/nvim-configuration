@@ -2,11 +2,10 @@ local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
 
-	lsp_zero.default_keymaps({buffer = bufnr})
+	lsp_zero.default_keymaps({buffer = bufnr, exclude={'<F4>', '<F3>'}})
 
-	vim.keymap.set("n", '<leader>.',vim.lsp.buf.code_action)
-	vim.keymap.set("n", '<S-A-f>', vim.lsp.buf.format)
-
+	vim.keymap.set("n", '<leader>.',vim.lsp.buf.code_action, { desc = "Selects a code action available at the current cursor position"})
+	vim.keymap.set("n", '<S-A-f>', vim.lsp.buf.format, { desc = "Format code in current buffer" })
 end)
 
 local nvim_lsp = require("lspconfig")
