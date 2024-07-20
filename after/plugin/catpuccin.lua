@@ -1,4 +1,4 @@
-local default_colorscheme = "catppuccin-frappe"
+local default_colorscheme = "catppuccin-mocha"
 
 local function save_colorscheme(colorscheme)
 	local file = io.open(vim.fn.stdpath("data") .. "/colorscheme", "w")
