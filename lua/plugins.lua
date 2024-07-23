@@ -122,7 +122,4 @@ return require('packer').startup(function(use)
 			{'l3mon4d3/luasnip'},
 		}
 	}
-
-	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-
 end)
