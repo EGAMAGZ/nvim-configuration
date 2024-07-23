@@ -87,7 +87,7 @@ return require('packer').startup(function(use)
 
 	use  {
 		'VonHeikemen/fine-cmdline.nvim',
-	requires = {
+		requires = {
 
 			{'MunifTanjim/nui.nvim'}
 		}
