@@ -56,6 +56,12 @@ require("catppuccin").setup {
 			scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
 			colored_indent_levels = true,
 		},
-		which_key = false
+		which_key = false,
+		barbecue = {
+			dim_dirname = true, -- directory name is dimmed by default
+			bold_basename = true,
+			dim_context = false,
+			alt_background = false,
+		},
 	}
 }
