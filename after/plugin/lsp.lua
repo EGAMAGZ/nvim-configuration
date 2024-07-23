@@ -10,11 +10,7 @@ end)
 
 local nvim_lsp = require("lspconfig")
 require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {
-	"pyright",
-	"denols"
-  },
+require('mason-lspconfig').setup {
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
@@ -31,4 +27,4 @@ require('mason-lspconfig').setup({
 	    }
     end,
   },
-})
+}

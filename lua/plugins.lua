@@ -44,6 +44,19 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 
+	-- Barbecue (Winbar vscode-like)
+	use{
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("barbecue").setup()
+		end,
+	}
+
 	-- Nvim-tree (File explorer)
 	use {
 		'nvim-tree/nvim-tree.lua',
@@ -93,18 +106,8 @@ return require('packer').startup(function(use)
 		}
 	}
 
-	-- Barbecue (Winbar vscode-like)
-	use{
-		"utilyre/barbecue.nvim",
-		tag = "*",
-		requires = {
-			"SmiteshP/nvim-navic",
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("barbecue").setup()
-		end,
-	}
+	-- Which Key
+	use "folke/which-key.nvim"
 
 	-- LSP
 	use {
@@ -120,6 +123,6 @@ return require('packer').startup(function(use)
 		}
 	}
 
-	-- Which Key
-	use "folke/which-key.nvim"
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+
 end)
