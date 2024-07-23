@@ -85,6 +85,13 @@ return require('packer').startup(function(use)
 	-- Discord Presence
 	use 'IogaMaster/neocord'
 
+	use  {
+		'VonHeikemen/fine-cmdline.nvim',
+	requires = {
+
+			{'MunifTanjim/nui.nvim'}
+		}
+	}
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
