@@ -109,16 +109,6 @@ return require('packer').startup(function(use)
 	-- Which Key
 	use "folke/which-key.nvim"
 
-	-- Dashboard (Home Screen)
-	use {
-		'nvimdev/dashboard-nvim',
-		event = 'VimEnter',
-		config = function()
-			require('dashboard').setup {
-			}
-		end,
-		requires = {'nvim-tree/nvim-web-devicons'}
-	}
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
