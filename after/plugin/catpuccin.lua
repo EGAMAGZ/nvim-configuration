@@ -45,6 +45,7 @@ vim.g.current_colorscheme = load_colorscheme() or default_colorscheme
 vim.cmd('colorscheme ' .. vim.g.current_colorscheme)
 
 require("catppuccin").setup {
+	show_end_of_buffer=false,
 	integrations = {
 		cmp = true,
 		gitsigns = true,
