@@ -28,3 +28,5 @@ require('mason-lspconfig').setup {
     end,
   },
 }
+
+nvim_lsp.gleam.setup({})
