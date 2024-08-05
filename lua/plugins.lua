@@ -79,12 +79,22 @@ return require('packer').startup(function(use)
 		end
 	}
 
+	-- Markdown preview
+    	use {
+		"OXY2DEV/markview.nvim",
+		requires = {
+			{"nvim-treesitter/nvim-treesitter"},
+			{"nvim-tree/nvim-web-devicons"}
+		}
+	}
+
 	-- Notify (Notifications)
 	use 'rcarriga/nvim-notify'
 
 	-- Discord Presence
 	use 'IogaMaster/neocord'
 
+	-- Floating command line
 	use  {
 		'VonHeikemen/fine-cmdline.nvim',
 		requires = {
@@ -110,5 +120,6 @@ return require('packer').startup(function(use)
 		}
 	}
 
+	-- Gleam LSP
 	use 'gleam-lang/gleam.vim'
 end)
