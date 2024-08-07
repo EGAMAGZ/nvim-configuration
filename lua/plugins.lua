@@ -53,6 +53,11 @@ return require('packer').startup(function(use)
 	-- Vim fugitive (Git panel)
 	use 'tpope/vim-fugitive'
 
+	use {
+    		'isakbm/gitgraph.nvim',
+		requires = { {'sindrets/diffview.nvim'} },
+	}
+
 	-- Colorizer
 	use 'norcalli/nvim-colorizer.lua'
 
