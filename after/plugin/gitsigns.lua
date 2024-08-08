@@ -10,3 +10,9 @@ require("gitsigns").setup {
 		virt_text_pos = "overlay"
 	}
 }
+
+vim.keymap.set("n", '<leader>gp', function() vim.cmd[[Git push]] end, { desc="Push commits" })
+vim.keymap.set("n",'<leader>gc', function() 
+	local message = vim.fn.input("Message > ")
+	vim.cmd('Git commit -m "' .. message..'"')
+end, { desc="Record changes to the repository" })
