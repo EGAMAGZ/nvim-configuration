@@ -20,12 +20,12 @@ map('n', '<Space>0', '<Cmd>BufferLast<CR>', { noremap = true, silent = true, des
 -- Pin/unpin buffer
 map('n', '<Space>p', '<Cmd>BufferPin<CR>', { noremap = true, silent = true, desc="Pin/Unpin current buffer" })
 -- Close buffer
-map('n', '<Space>c', '<Cmd>BufferClose<CR>', { noremap = true, silent = true, desc="Close current buffer" })
+map('n', '<Space>cb', '<Cmd>BufferClose<CR>', { noremap = true, silent = true, desc="Close current buffer" })
 -- Wipeout buffer
 map('n', '<Space>w', '<Cmd>BufferWipeout<CR>', { noremap = true, silent = true, desc="Wipeout buffer(s)" })
 -- Close commands
 --                 :BufferCloseAllButCurrent
-map('n', '<Space>cc', '<Cmd>BufferCloseAllButCurrent<CR>', { noremap = true, silent = true, desc="Close all buffers but current" })
+map('n', '<Space>ca', '<Cmd>BufferCloseAllButCurrent<CR>', { noremap = true, silent = true, desc="Close all buffers but current" })
 --                 :BufferCloseAllButPinned
 map('n', '<Space>cp', '<Cmd>BufferCloseAllButPinned<CR>', { noremap = true, silent = true, desc="Close all buffers but pinned" })
 --                 :BufferCloseAllButCurrentOrPinned
@@ -38,8 +38,8 @@ map('n', '<Space>cr', '<Cmd>BufferCloseBuffersRight<CR>', { noremap = true, sile
 -- Magic buffer-picking mode
 map('n', '<Space>bp', '<Cmd>BufferPick<CR>', { noremap = true, silent = true, desc="Pick the current buffer" })
 -- Sort automatically by...
-map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', { noremap = true, silent = true, desc="Order buffers by buffer number" })
-map('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', { noremap = true, silent = true,desc ="Order buffers by buffer name" })
-map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', { noremap = true, silent = true, desc="Order buffers by buffer directory" })
-map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', { noremap = true, silent = true, desc="Order buffers by buffer languague" })
-map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', { noremap = true, silent = true, desc="Order buffers by buffer window number" })
+map('n', '<Space>ob', '<Cmd>BufferOrderByBufferNumber<CR>', { noremap = true, silent = true, desc="Order buffers by buffer number" })
+map('n', '<Space>on', '<Cmd>BufferOrderByName<CR>', { noremap = true, silent = true,desc ="Order buffers by buffer name" })
+map('n', '<Space>od', '<Cmd>BufferOrderByDirectory<CR>', { noremap = true, silent = true, desc="Order buffers by buffer directory" })
+map('n', '<Space>ol', '<Cmd>BufferOrderByLanguage<CR>', { noremap = true, silent = true, desc="Order buffers by buffer languague" })
+map('n', '<Space>ow', '<Cmd>BufferOrderByWindowNumber<CR>', { noremap = true, silent = true, desc="Order buffers by buffer window number" })
