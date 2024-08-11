@@ -6,7 +6,14 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+
+local packer = require('packer')
+
+packer.init {
+	max_jobs = 3
+}
+
+return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	-- Icons 
