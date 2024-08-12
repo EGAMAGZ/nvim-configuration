@@ -83,14 +83,6 @@ return packer.startup(function(use)
 	-- Zen mode
 	use "folke/zen-mode.nvim"
 
-	-- Indent Lines
-	use {
-		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("ibl").setup()
-		end
-	}
-
 	-- Markdown preview
     	use {
 		"OXY2DEV/markview.nvim",
