@@ -1,7 +1,15 @@
-local nvimbattery = {
+local nvim_battery = {
 	function()
 		return require("battery").get_status_line()
 	end,
+}
+
+local gitcommit_extension = {
+	sections = {
+		lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+		lualine_b = {'branch'},
+	},
+	filetypes = {'gitcommit'}
 }
 
 require("lualine").setup {
@@ -21,7 +29,7 @@ require("lualine").setup {
 		lualine_y = {},
 		lualine_z = {
 			'location', 
-			nvimbattery, 
+			nvim_battery, 
 			{
 				'os.date("%a %d %b %H:%M")', 
 				separator = { right = '' }, 
@@ -37,5 +45,5 @@ require("lualine").setup {
 		lualine_y = {},
 		lualine_z = {}
 	},
-	extensions = {"mason","fugitive", "nvim-tree"}
+	extensions = {"mason","fugitive", "nvim-tree", gitcommit_extension }
 }
