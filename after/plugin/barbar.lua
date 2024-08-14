@@ -20,7 +20,7 @@ map('n', '<Space>0', '<Cmd>BufferLast<CR>', { noremap = true, silent = true, des
 -- Pin/unpin buffer
 map('n', '<Space>p', '<Cmd>BufferPin<CR>', { noremap = true, silent = true, desc="Pin/Unpin current buffer" })
 -- Close buffer
-map('n', '<Space>cb', '<Cmd>BufferClose<CR>', { noremap = true, silent = true, desc="Close current buffer" })
+map('n', '<Space>cc', '<Cmd>BufferClose<CR>', { noremap = true, silent = true, desc="Close current buffer" })
 -- Wipeout buffer
 map('n', '<Space>w', '<Cmd>BufferWipeout<CR>', { noremap = true, silent = true, desc="Wipeout buffer(s)" })
 -- Close commands

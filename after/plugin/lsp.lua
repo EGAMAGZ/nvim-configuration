@@ -9,6 +9,7 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 local nvim_lsp = require("lspconfig")
+
 require('mason').setup({})
 require('mason-lspconfig').setup {
   handlers = {
@@ -30,3 +31,5 @@ require('mason-lspconfig').setup {
 }
 
 nvim_lsp.gleam.setup({})
+
+vim.keymap.set("n", "<leader>m", function() vim.cmd[[Mason]] end, { desc="Open LSP package manager (Mason)" })

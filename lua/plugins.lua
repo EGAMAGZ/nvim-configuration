@@ -51,6 +51,15 @@ return packer.startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 
+	use { 
+		'justinhj/battery.nvim',
+		requires = 
+		{
+			{'nvim-tree/nvim-web-devicons'}, 
+			{'nvim-lua/plenary.nvim'}
+		}
+	}
+
 	-- Nvim-tree (File explorer)
 	use {
 		'nvim-tree/nvim-tree.lua',
