@@ -19,12 +19,52 @@ require('mason-lspconfig').setup {
     tsserver = function ()
 	    require('lspconfig').tsserver.setup{
 		    single_file_support = false,
-		    root_dir = nvim_lsp.util.root_pattern("package.json")
+		    root_dir = nvim_lsp.util.root_pattern("package.json"),
+		    -- Inlay hints' settings
+		    settings = {
+			    typescript = {
+				    inlayHints = {
+					    includeInlayParameterNameHints = "all",
+					    includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+					    includeInlayFunctionParameterTypeHints = true,
+					    includeInlayVariableTypeHints = true,
+					    includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+					    includeInlayPropertyDeclarationTypeHints = true,
+					    includeInlayFunctionLikeReturnTypeHints = true,
+					    includeInlayEnumMemberValueHints = true,
+				    },
+			    },
+			    javascript = {
+				    inlayHints = {
+					    includeInlayParameterNameHints = "all",
+					    includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+					    includeInlayFunctionParameterTypeHints = true,
+					    includeInlayVariableTypeHints = true,
+					    includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+					    includeInlayPropertyDeclarationTypeHints = true,
+					    includeInlayFunctionLikeReturnTypeHints = true,
+					    includeInlayEnumMemberValueHints = true,
+				    },
+			    },
+		    }
 	    }
     end,
     denols = function()
 	    require('lspconfig').denols.setup{
 		    root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),	
+		    -- Inlay hints' settings
+		    settings = {
+			    deno = {
+				    inlayHints = {
+					    parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = true },
+					    parameterTypes = { enabled = true },
+					    variableTypes = { enabled = true, suppressWhenTypeMatchesName = true },
+					    propertyDeclarationTypes = { enabled = true },
+					    functionLikeReturnTypes = { enable = true },
+					    enumMemberValues = { enabled = true },
+				    },
+			    }
+		    }
 	    }
     end,
   },

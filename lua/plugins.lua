@@ -135,4 +135,12 @@ return packer.startup(function(use)
 
 	-- Gleam LSP
 	use 'gleam-lang/gleam.vim'
+
+	-- Inlay Hints
+	use {
+		"MysticalDevil/inlay-hints.nvim",
+		requires = {
+			{'neovim/nvim-lspconfig'}
+		},
+	}
 end)
