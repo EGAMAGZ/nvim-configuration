@@ -6,7 +6,15 @@ local nvim_battery = {
 
 local gitcommit_extension = {
 	sections = {
-		lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+		lualine_a = { 
+			{ 
+				'mode', 
+				separator = { 
+					left = '' 
+				}, 
+				right_padding = 2 
+			} 
+		},
 		lualine_b = {'branch'},
 	},
 	filetypes = {'gitcommit'}
