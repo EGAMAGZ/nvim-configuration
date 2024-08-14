@@ -46,9 +46,12 @@ require("lualine").setup {
 		},
 	},
 	inactive_sections = {
-		lualine_a = {},
+		lualine_a = {
+			'filename', 
+			{ 'filetype', icon_only=true }
+		},
 		lualine_b = {'diff', 'diagnostics'},
-		lualine_c = {'filename'},
+		lualine_c = {},
 		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {}
