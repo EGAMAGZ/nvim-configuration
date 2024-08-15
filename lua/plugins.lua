@@ -119,6 +119,12 @@ return packer.startup(function(use)
 	-- Which Key
 	use "folke/which-key.nvim"
 
+	-- Treesitter
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate"
+	}
+
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
