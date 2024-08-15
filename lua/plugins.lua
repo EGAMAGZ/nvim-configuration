@@ -92,15 +92,6 @@ return packer.startup(function(use)
 	-- Zen mode
 	use "folke/zen-mode.nvim"
 
-	-- Markdown preview
-    	use {
-		"OXY2DEV/markview.nvim",
-		requires = {
-			{"nvim-treesitter/nvim-treesitter"},
-			{"nvim-tree/nvim-web-devicons"}
-		}
-	}
-
 	-- Notify (Notifications)
 	use 'rcarriga/nvim-notify'
 
