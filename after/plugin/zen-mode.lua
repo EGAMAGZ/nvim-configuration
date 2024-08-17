@@ -1,6 +1,11 @@
 local zen_mode = require("zen-mode")
 
 zen_mode.setup{
+	window= {
+		options = {
+			number = false
+		}
+	},
 	plugins = {
 		gitsigns = {
 			enabled=true
