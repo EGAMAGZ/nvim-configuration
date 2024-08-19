@@ -110,24 +110,6 @@ return packer.startup(function(use)
 	-- Which Key
 	use "folke/which-key.nvim"
 
-	-- Markview
-	use {
-		"OXY2DEV/markview.nvim",
-		requires = {
-			{"nvim-treesitter/nvim-treesitter"},
-			{"nvim-tree/nvim-web-devicons"},
-		},
-		config = function()
-			require('markview').setup()
-		end,
-	}
-
-	-- Treesitter
-	use {
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate"
-	}
-
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
