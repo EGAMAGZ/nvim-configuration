@@ -1,4 +1,4 @@
-require("lorem").setup{
+require("lorem").opts{
 	sentenceLength = {
 		words_per_sentence = 8,
 		sentences_per_paragraph = 6
