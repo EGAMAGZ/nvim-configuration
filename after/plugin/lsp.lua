@@ -16,8 +16,8 @@ require('mason-lspconfig').setup {
     function(server_name)
       require('lspconfig')[server_name].setup({})
     end,
-    tsserver = function ()
-	    require('lspconfig').tsserver.setup{
+    ts_ls = function ()
+	    require('lspconfig').ts_ls.setup{
 		    single_file_support = false,
 		    root_dir = nvim_lsp.util.root_pattern("package.json"),
 		    -- Inlay hints' settings
