@@ -10,7 +10,7 @@ vim.cmd [[packadd packer.nvim]]
 local packer = require('packer')
 
 packer.init {
-	max_jobs = 3
+	max_jobs = 1
 }
 
 return packer.startup(function(use)
@@ -113,7 +113,7 @@ return packer.startup(function(use)
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
-		branch = 'v3.x',
+		branch = 'v4.x',
 		requires = {
 			{'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
