@@ -1,2 +1,1 @@
-require('battery').setup{
-}
+--require('battery').setup{}
