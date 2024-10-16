@@ -7,7 +7,7 @@ require("gitsigns").setup {
 	current_line_blame = true,
 	current_line_blame_opts = {
 		delay = 300,
-		virt_text_pos = "overlay"
+		virt_text_pos = "eol"
 	}
 }
 
