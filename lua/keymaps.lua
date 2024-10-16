@@ -6,4 +6,4 @@ vim.keymap.set('n', '<leader>ts', "<cmd>vertical botright terminal<cr>", { desc=
 -- Keymaps for Esc alternatives
 vim.keymap.set('i', '<leader>nm', function() vim.cmd[[stopinsert]] end, { desc="Change to normal mode"})
 vim.keymap.set('v', '<leader>nm', '<Esc>', { desc="Change to normal mode"})
-
+vim.keymap.set('n', '<leader>nm', '<Esc>', { desc="Change to normal mode (From insert or visual)"})
