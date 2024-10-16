@@ -110,9 +110,6 @@ return packer.startup(function(use)
 	-- Which Key
 	use "folke/which-key.nvim"
 
-	-- Precognition
-	use "tris203/precognition.nvim"
-
 	-- LSP
 	use {
 		'vonheikemen/lsp-zero.nvim',
