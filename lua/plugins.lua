@@ -134,4 +134,12 @@ return packer.startup(function(use)
 			{'neovim/nvim-lspconfig'}
 		},
 	}
+
+	use {
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{"nvim-lua/plenary.nvim"},
+			{"nvim-treesitter/nvim-treesitter"}
+		}
+	}
 end)
