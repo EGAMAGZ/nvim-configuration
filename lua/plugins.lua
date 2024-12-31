@@ -137,4 +137,6 @@ return packer.startup(function(use)
 			{"nvim-treesitter/nvim-treesitter"}
 		}
 	}
+
+	use 'IogaMaster/neocord'
 end)
