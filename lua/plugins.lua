@@ -126,6 +126,8 @@ return packer.startup(function(use)
 	-- Inlay diagnostics
 	use "rachartier/tiny-inline-diagnostic.nvim"
 
+	use "lukas-reineke/indent-blankline.nvim"
+
 	-- Refactoring
 
 	use {
