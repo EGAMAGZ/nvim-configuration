@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("BufWritePost", {
-    group = vim.api.nvim_create_augroup("PACKER", { clear = true }),
-    pattern = "plugins.lua",
-    command = "source <afile> | PackerCompile",
+	group = vim.api.nvim_create_augroup("PACKER", { clear = true }),
+	pattern = "plugins.lua",
+	command = "source <afile> | PackerCompile",
 })
 
 vim.cmd [[packadd packer.nvim]]
@@ -56,12 +56,12 @@ return packer.startup(function(use)
 		'nvim-tree/nvim-tree.lua',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
-	
+
 	-- Vim fugitive (Git panel)
 	use 'tpope/vim-fugitive'
 
 	use {
-    		'isakbm/gitgraph.nvim',
+		'isakbm/gitgraph.nvim',
 		requires = { {'sindrets/diffview.nvim'} },
 	}
 
@@ -126,6 +126,7 @@ return packer.startup(function(use)
 	-- Inlay diagnostics
 	use "rachartier/tiny-inline-diagnostic.nvim"
 
+	-- Display blank lines
 	use "lukas-reineke/indent-blankline.nvim"
 
 	-- Refactoring
@@ -138,5 +139,43 @@ return packer.startup(function(use)
 		}
 	}
 
+	-- Markview
+	use {
+		"OXY2DEV/markview.nvim",
+		requires = {
+			{"nvim-treesitter/nvim-treesitter"},
+			{"nvim-tree/nvim-web-devicons"}
+		}
+	}
+
+	-- Unit converter
+	use {
+		"atiladefreitas/tinyunit",
+		config = function()
+			require("tinyunit").setup({
+				-- your custom config here (optional)
+			})
+		end,
+	}
+
+	-- Color picker
+	use {
+		"nvzone/minty",
+		cmd = { "Shades", "Huefy" },
+		requires = {
+			{"nvzone/volt"}
+		}
+	}
+
+	-- Discord Activity
 	use 'IogaMaster/neocord'
+
+	-- Animations
+	use {
+		'sphamba/smear-cursor.nvim',
+		config = function()
+			require("smear_cursor").setup()
+			require("smear_cursor").enabled = true
+		end
+	}
 end)
