@@ -28,11 +28,12 @@ telescope.setup {
 }
 
 
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc="List files in the current working directory, respects .gitignore" })
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc="Lists files in the current working directory, respects .gitignore" })
 vim.keymap.set('n', '<leader>fg', builtin.git_files, {desc="Fuzzy search through the output of git ls-files command, respects .gitignore"})
 vim.keymap.set('n', '<leader>fs', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end, { desc = "Search for the string under the current working directory"})
-vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { desc="List references for word under the cursor"})
-vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc="List diagnostics for all open buffers"})
+vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { desc="Lists references for word under the cursor"})
+vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc="Lists diagnostics for all open buffers"})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc="Lists open buffers in current neovim instance" })
+vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc="Lists available colorschemes" })
