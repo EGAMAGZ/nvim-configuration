@@ -178,4 +178,7 @@ return packer.startup(function(use)
 			require("smear_cursor").enabled = true
 		end
 	}
+
+	-- Namu.nvim
+	use "bassamsdata/namu.nvim"
 end)
