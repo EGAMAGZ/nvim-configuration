@@ -179,6 +179,4 @@ return packer.startup(function(use)
 		end
 	}
 
-	-- Namu.nvim
-	use "bassamsdata/namu.nvim"
 end)
