@@ -79,9 +79,6 @@ return packer.startup(function(use)
 		end
 	}
 
-	-- Lorem ipsum generator
-	use 'derektata/lorem.nvim'
-
 	-- Zen mode
 	use "folke/zen-mode.nvim"
 
