@@ -32,10 +32,12 @@ return packer.startup(function(use)
 		}
 	}
 
-	-- Colorschema
+	-- Colorscheme
 	use { 
 		"catppuccin/nvim", as = "catppuccin"
 	}
+
+	use "dgox16/oldworld.nvim"
 
 	-- Statusline
 	use {

@@ -18,6 +18,9 @@ require("catppuccin").setup {
 			dim_context = false,
 			alt_background = false,
 		},
+		telescope = {
+			enabled=true,
+		},
 		native_lsp = {
 			enabled = true,
 			virtual_text = {
@@ -38,5 +41,18 @@ require("catppuccin").setup {
 				background = true,
 			},
 		},
+	}
+}
+
+require("oldworld").setup{
+	integrations = {
+		cmp=true,
+		gitsigns=true,
+		indent_blankline=true,
+		lsp=true,
+		telescope=true,
+		notify=true,
+		markdown=true,
+		mason=true,
 	}
 }
