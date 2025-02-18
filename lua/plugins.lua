@@ -39,6 +39,8 @@ return packer.startup(function(use)
 
 	use "dgox16/oldworld.nvim"
 
+	use "jackplus-xyz/binary.nvim"
+
 	-- Statusline
 	use {
 		'romgrk/barbar.nvim',

@@ -56,3 +56,5 @@ require("oldworld").setup{
 		mason=true,
 	}
 }
+
+require("binary").setup{}
