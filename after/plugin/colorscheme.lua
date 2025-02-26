@@ -57,4 +57,6 @@ require("oldworld").setup{
 	}
 }
 
-require("binary").setup{}
+require("e-ink").setup{
+
+}

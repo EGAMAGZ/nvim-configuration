@@ -39,7 +39,7 @@ return packer.startup(function(use)
 
 	use "dgox16/oldworld.nvim"
 
-	use "jackplus-xyz/binary.nvim"
+	use "alexxGmZ/e-ink.nvim"
 
 	-- Statusline
 	use {
