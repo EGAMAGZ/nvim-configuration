@@ -72,4 +72,4 @@ require('mason-lspconfig').setup {
 
 nvim_lsp.gleam.setup({})
 
-vim.keymap.set("n", "<leader>m", function() vim.cmd[[Mason]] end, { desc="Open LSP package manager (Mason)" })
+vim.keymap.set("n", "<leader>mm", function() vim.cmd[[Mason]] end, { desc="Open LSP package manager (Mason)" })
