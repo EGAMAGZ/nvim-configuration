@@ -19,7 +19,7 @@ require('mason-lspconfig').setup {
 		ts_ls = function ()
 			require('lspconfig').ts_ls.setup{
 				single_file_support = false,
-				root_dir = nvim_lsp.util.root_pattern("package.json"),
+				root_dir = nvim_lsp.util.root_pattern("package.lock"),
 				-- Inlay hints' settings
 				settings = {
 					typescript = {
@@ -51,7 +51,7 @@ require('mason-lspconfig').setup {
 		end,
 		denols = function()
 			require('lspconfig').denols.setup{
-				root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),	
+				root_dir = nvim_lsp.util.root_pattern("deno.lock"),	
 				-- Inlay hints' settings
 				settings = {
 					deno = {
