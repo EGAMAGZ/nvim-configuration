@@ -16,42 +16,42 @@ require('mason-lspconfig').setup {
 		function(server_name)
 			require('lspconfig')[server_name].setup({})
 		end,
-		ts_ls = function ()
-			require('lspconfig').ts_ls.setup{
-				single_file_support = false,
-				root_dir = nvim_lsp.util.root_pattern("package.lock"),
-				-- Inlay hints' settings
-				settings = {
-					typescript = {
-						inlayHints = {
-							includeInlayParameterNameHints = "all",
-							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-							includeInlayFunctionParameterTypeHints = true,
-							includeInlayVariableTypeHints = true,
-							includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-							includeInlayPropertyDeclarationTypeHints = true,
-							includeInlayFunctionLikeReturnTypeHints = true,
-							includeInlayEnumMemberValueHints = true,
-						},
-					},
-					javascript = {
-						inlayHints = {
-							includeInlayParameterNameHints = "all",
-							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-							includeInlayFunctionParameterTypeHints = true,
-							includeInlayVariableTypeHints = true,
-							includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-							includeInlayPropertyDeclarationTypeHints = true,
-							includeInlayFunctionLikeReturnTypeHints = true,
-							includeInlayEnumMemberValueHints = true,
-						},
-					},
-				}
-			}
-		end,
+--		ts_ls = function ()
+--			require('lspconfig').ts_ls.setup{
+--				single_file_support = false,
+--				root_dir = nvim_lsp.util.root_pattern("package.json"),
+--				-- Inlay hints' settings
+--				settings = {
+--					typescript = {
+--						inlayHints = {
+--							includeInlayParameterNameHints = "all",
+--							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+--							includeInlayFunctionParameterTypeHints = true,
+--							includeInlayVariableTypeHints = true,
+--							includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+--							includeInlayPropertyDeclarationTypeHints = true,
+--							includeInlayFunctionLikeReturnTypeHints = true,
+--							includeInlayEnumMemberValueHints = true,
+--						},
+--					},
+--					javascript = {
+--						inlayHints = {
+--							includeInlayParameterNameHints = "all",
+--							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+--							includeInlayFunctionParameterTypeHints = true,
+--							includeInlayVariableTypeHints = true,
+--							includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+--							includeInlayPropertyDeclarationTypeHints = true,
+--							includeInlayFunctionLikeReturnTypeHints = true,
+--							includeInlayEnumMemberValueHints = true,
+--						},
+--					},
+--				}
+--			}
+--		end,
 		denols = function()
 			require('lspconfig').denols.setup{
-				root_dir = nvim_lsp.util.root_pattern("deno.lock"),	
+				root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc", "package.json"),	
 				-- Inlay hints' settings
 				settings = {
 					deno = {

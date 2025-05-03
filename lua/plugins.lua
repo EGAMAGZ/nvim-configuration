@@ -38,8 +38,7 @@ return packer.startup(function(use)
 	}
 
 	use "dgox16/oldworld.nvim"
-
-	use "alexxGmZ/e-ink.nvim"
+	use 'bettervim/yugen.nvim'
 
 	-- Statusline
 	use {

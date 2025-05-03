@@ -57,6 +57,8 @@ require("oldworld").setup{
 	}
 }
 
-require("e-ink").setup{
 
-}
+local ok, _ = pcall(vim.cmd, 'colorscheme oldworld')
+if not ok then
+  vim.cmd 'colorscheme default'
+end
