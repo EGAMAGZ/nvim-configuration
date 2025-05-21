@@ -39,6 +39,13 @@ return packer.startup(function(use)
 
 	use "dgox16/oldworld.nvim"
 	use 'bettervim/yugen.nvim'
+	use {
+		"vague2k/vague.nvim",
+		config = function()
+			require("vague").setup({
+			})
+		end
+	}
 
 	-- Statusline
 	use {
@@ -168,7 +175,13 @@ return packer.startup(function(use)
 	}
 
 	-- Discord Activity
-	use 'IogaMaster/neocord'
+	use {
+  		'vyfor/cord.nvim',
+  		run = ':Cord update',
+  		config = function()
+			require('cord').setup {}
+  		end
+	}
 
 	-- Animations
 	use {
