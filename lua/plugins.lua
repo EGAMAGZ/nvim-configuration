@@ -16,6 +16,9 @@ packer.init {
 return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
+	-- Game to learn neovim
+	use 'ThePrimeagen/vim-be-good'
+
 	-- Icons 
 	use 'nvim-tree/nvim-web-devicons'
 
